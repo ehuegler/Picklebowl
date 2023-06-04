@@ -1,0 +1,21 @@
+body {
+  background-color: #f2d096;
+  font-family: 'Kameron', sans-serif;
+}
+
+.logo {
+  max-width: 100%;
+}
+
+main {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.standings {
+  width: 100%;
+}

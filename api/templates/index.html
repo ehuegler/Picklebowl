@@ -1,0 +1,24 @@
+{% set title='Fishbowl Pickleballers' %}
+{% include 'inc/header.html' %}
+
+<main>
+  <h1>Standings</h1>
+  <table class="standings">
+    <tr>
+      <th>Player</th>
+      <th>Wins</th>
+      <th>Loses</th>
+      <th>Set Diff</th>
+    </tr>
+    {% for player in players %}
+    <tr>
+      <td>{{player.name}}</td>
+      <td>{{player.getWins()}}</td>
+      <td>{{player.getLoses()}}</td>
+      <td>{{player.getSetDiff()}}</td>
+    </tr>
+    {% endfor %}
+  </table>
+</main>
+
+{% include 'inc/footer.html' %}

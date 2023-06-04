@@ -1,0 +1,37 @@
+{% set title='Fishbowl Pickleballers' %}
+{% include 'inc/header.html' %}
+
+<main>
+  <h1>
+    Admin Page
+  </h1>
+
+  <h2>Add Game</h2>
+  <form action="/newGame" method="post">
+    <input type="text" name="homePlayer" id="homePLayer" required>
+    <input type="number" name="homeScore" id="homeScore" required>
+    <input type="text" name="awayPlayer" id="homePlayer" required>
+    <input type="number" name="awayScore" id="awayScore" required>
+    <input type="submit">
+  </form>
+
+  <h2>Add PLayer</h2>
+  <form action="/newPlayer" method="post">
+    <input type="text" name="name" id="name">
+    <input type="submit">
+  </form>
+  
+  <h2>Download Season Data as JSON</h2>
+  <form action="/save" method="get" target="_blank">
+    <input type="submit" value="Save Season Data">
+  </form>
+
+  <h2>Upload Season Data File</h2>
+  <form action="/upload" method="post">
+    <input type="textarea" name="seasonData" id="filename", required>
+    <input type="submit" value="Submit">
+  </form>
+
+</main>
+
+{% include 'inc/footer.html' %}
