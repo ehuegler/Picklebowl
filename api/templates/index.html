@@ -17,7 +17,7 @@
       <td>{{player.wins}}</td>
       <td>{{player.loses}}</td>
       <td>{{player.diff}}</td>
-      <td>{{player.wp}}</td>
+      <td>{{"%.2f"|format(player.wp)}}</td>
     </tr>
     {% endfor %}
   </table>

@@ -132,7 +132,7 @@ FROM PLAYERS;""")
   
   players = [Player(row) for row in players]
   players.sort(key= lambda x : (x.loses, x.name))
-  players.sort(reverse=True, key = lambda x: (x.wins, x.diff))
+  players.sort(reverse=True, key = lambda x: (x.wp, x.games, x.diff))
     
   return render_template('index.html', players = players)
   
