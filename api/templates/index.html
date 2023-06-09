@@ -9,13 +9,15 @@
       <th>Wins</th>
       <th>Loses</th>
       <th>Set Diff</th>
+      <th>Winning %</th>
     </tr>
     {% for player in players %}
     <tr>
       <td>{{player.name}}</td>
-      <td>{{player.getWins()}}</td>
-      <td>{{player.getLoses()}}</td>
-      <td>{{player.getSetDiff()}}</td>
+      <td>{{player.wins}}</td>
+      <td>{{player.loses}}</td>
+      <td>{{player.diff}}</td>
+      <td>{{player.wp}}</td>
     </tr>
     {% endfor %}
   </table>

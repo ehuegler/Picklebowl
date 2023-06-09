@@ -3,6 +3,10 @@ body {
   font-family: 'Kameron', sans-serif;
 }
 
+header {
+  text-align: center;
+}
+
 .logo {
   max-width: 100%;
 }
