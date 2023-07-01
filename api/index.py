@@ -142,7 +142,19 @@ def admin():
 
 @app.route('/save')
 def save():
-  return json.dumps([])
+  conn = get_db_connection()
+  cursor = conn.cursor()
+
+  # eventually want to have this also save stats, but want to make edit to database before I do that
+  cursor.execute("""SELECT * 
+                    FROM GAMES""")
+  games = cursor.fetchall()
+
+
+  cursor.close()
+  conn.close()
+
+  return json.dumps(games)
 
 @app.route('/upload', methods=['POST'])
 def upload():
